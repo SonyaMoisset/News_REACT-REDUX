@@ -6,10 +6,15 @@ import { bindActionCreators } from 'redux'
 import LatestNews from '../components/home/Latest'
 
 class Home extends Component {
+
+    componentDidMount() {
+        this.props.latestNews()
+    }
+
     render() {
         return (
             <div>
-                <LatestNews />
+                <LatestNews latest={this.props.articles.latest}/>
             </div>
         );
     }
@@ -25,4 +30,4 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators({ latestNews }, dispatch)
 }
 
-export default connect(mapStateToProps, null)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(Home)
