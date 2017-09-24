@@ -28,10 +28,29 @@ export function latestGallery() {
     const request = fetch(`${URL}/galleries?_order=desc&_limit=2`, {
         method: 'GET'
     })
-        .then(response => response.json())
+    .then(response => response.json())
     
     return {
         type: 'GET_LATEST_GALLERY',
         payload: request
+    }
+}
+
+export function selectedNews(id) {
+    const request = fetch(`${URL}/articles?id=${id}`, {
+        method: 'GET'
+    })
+    .then(response => response.json())
+    
+    return {
+        type: 'GET_SELECTED_NEWS',
+        payload: request
+    }
+}
+
+export function clearSelectedNews() {
+    return {
+        type: 'CLEAR_SELECTED_NEWS',
+        payload: []
     }
 }
