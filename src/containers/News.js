@@ -13,9 +13,49 @@ class News extends Component {
         this.props.clearSelectedNews()
     }
 
+    renderNews = ({ selected }) => {
+        if (selected) {
+            return selected.map((item) => {
+                return (
+                    <div key={item.id}>
+                        <div className="tags">
+                            <span>
+                                <i className="fa fa-eye"></i>
+                                {item.views}
+                            </span>
+                            <span>
+                                <i className="fa fa-thumbs-up"></i>
+                                {item.likes[0]}
+                            </span>
+                            <span>
+                                <i className="fa fa-thumbs-down"></i>
+                                {item.likes[1]}
+                            </span>  
+                        </div>
+
+                        <div className="top">
+                            <h2>{item.title}</h2> 
+                            <span>Article by: <strong>{item.author}</strong></span>
+                        </div>
+
+                        <img alt={item.title} src={`/images/articles/${item.img}`} />
+
+                        <div className="body-news">
+                            {item.body}    
+                        </div>
+
+                        <div></div>
+                    </div>
+                )
+            })
+        }
+    }
+
     render() {
         return (
-            <div>ARTICLES</div>
+            <div className="news-container">
+                {this.renderNews(this.props.articles)}    
+            </div>
         )
     }
 }
