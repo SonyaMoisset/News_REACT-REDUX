@@ -1,0 +1,16 @@
+.slide-item-wrap h3 {
+    font-weight: 300;
+    text-align: center;
+}
+
+.slide-item-wrap .slide-item .image {
+    height: 500px;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+.slide-item-wrap .slide-item .description {
+    box-sizing: border-box;
+    padding: 20px;
+    background: #e0e0e0;
+}
