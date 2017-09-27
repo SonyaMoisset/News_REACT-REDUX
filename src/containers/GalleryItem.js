@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { selectedGallery, clearSelectedGallery } from '../actions'
+import { selectedGallery, clearSelectedGallery } from '../actions/gallery'
 import { bindActionCreators } from 'redux'
 import Slider from 'react-slick'
 

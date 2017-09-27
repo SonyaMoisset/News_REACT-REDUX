@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { selectedNews, clearSelectedNews } from '../actions'
+import { selectedNews, clearSelectedNews } from '../actions/news'
 import { bindActionCreators } from 'redux'
 
 import Counter from './LikesCounter'
@@ -75,7 +75,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({selectedNews, clearSelectedNews}, dispatch)
+    return bindActionCreators({ selectedNews, clearSelectedNews }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(News)
