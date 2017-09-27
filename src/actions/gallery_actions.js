@@ -1,6 +1,6 @@
 export const latestGallery = () => {
     const request = fetch(`http://localhost:3004/galleries?_order=desc&_limit=2`, { method: 'GET' })
-    .then(response => response.json())
+                    .then(response => response.json())
 
     return {
         type: 'GET_LATEST_GALLERY',
@@ -10,7 +10,7 @@ export const latestGallery = () => {
 
 export const selectedGallery = id => {
     const request = fetch(`http://localhost:3004/galleries?id=${id}`, { method: 'GET' })
-    .then(response => response.json())
+                    .then(response => response.json())
 
     return {
         type: 'GET_SELECTED_GALLERY',

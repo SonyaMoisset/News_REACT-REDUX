@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { handleLikes } from '../actions/likes'
+import { handleLikes } from '../actions/likes_actions'
 import { bindActionCreators } from 'redux'
 
 class LikesCounter extends Component {

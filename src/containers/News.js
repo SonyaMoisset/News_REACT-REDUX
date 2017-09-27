@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { selectedNews, clearSelectedNews } from '../actions/news'
+import { selectedNews, clearSelectedNews } from '../actions/news_actions'
 import { bindActionCreators } from 'redux'
 
 import Counter from './LikesCounter'

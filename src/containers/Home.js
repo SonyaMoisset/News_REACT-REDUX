@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { latestNews, otherNews } from '../actions/news'
-import { latestGallery } from '../actions/gallery'
+import { latestNews, otherNews } from '../actions/news_actions'
+import { latestGallery } from '../actions/gallery_actions'
 import { bindActionCreators } from 'redux'
 
 import LatestNews from '../components/home/Latest'

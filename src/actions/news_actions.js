@@ -1,6 +1,6 @@
 export const latestNews = () => {
     const request = fetch(`http://localhost:3004/articles?_order=desc&_end=3`, { method: 'GET' })
-    .then(response => response.json())
+                    .then(response => response.json())
 
     return {
         type: 'GET_LATEST',
@@ -10,7 +10,7 @@ export const latestNews = () => {
 
 export const otherNews = () => {
     const request = fetch(`http://localhost:3004/articles?_order=desc&_start=3&_end=10`, { method: 'GET' })
-    .then(response => response.json())
+                    .then(response => response.json())
 
     return {
         type: 'GET_OTHER',
@@ -18,11 +18,9 @@ export const otherNews = () => {
     }
 }
 
-export function selectedNews(id) {
-    const request = fetch(`http://localhost:3004/articles?id=${id}`, {
-        method: 'GET'
-    })
-        .then(response => response.json())
+export const selectedNews = id => {
+    const request = fetch(`http://localhost:3004/articles?id=${id}`, { method: 'GET' })
+                    .then(response => response.json())
 
     return {
         type: 'GET_SELECTED_NEWS',
@@ -30,7 +28,7 @@ export function selectedNews(id) {
     }
 }
 
-export function clearSelectedNews() {
+export const clearSelectedNews = () => {
     return {
         type: 'CLEAR_SELECTED_NEWS',
         payload: []
