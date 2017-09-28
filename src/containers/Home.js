@@ -4,9 +4,7 @@ import { latestNews, otherNews } from '../actions/news_actions'
 import { latestGallery } from '../actions/gallery_actions'
 import { bindActionCreators } from 'redux'
 
-import LatestNews from '../components/home/Latest'
-import OtherNews from '../components/home/OtherNews'
-import Gallery from '../components/home/Gallery'
+import { Gallery, LatestNews, OtherNews } from '../components'
 
 class Home extends Component {
 

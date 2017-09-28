@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const showLatest = ({latest}) => {
+const showLatestNews = ({ latest }) => {
     if (latest) {
-        return latest.map((article) => {
+        return latest.map(article => {
             return (
                 <Link
                     key={article.id}
@@ -23,12 +23,10 @@ const showLatest = ({latest}) => {
     }
 }
 
-const Latest = (props) => {
-    return (
-        <div className="home-latest">
-            {showLatest(props)}    
-        </div>
-    )
-}
+const LatestNews = props => (
+    <div className="home-latest">
+        {showLatestNews(props)}
+    </div>
+)
 
-export default Latest
+export default LatestNews

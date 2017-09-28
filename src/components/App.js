@@ -5,8 +5,7 @@ import Home from '../containers/Home'
 import News from '../containers/News'
 import GalleryItem from '../containers/GalleryItem'
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import { Header, Footer } from '../components'
 
 class App extends Component {
     render() {
@@ -15,7 +14,7 @@ class App extends Component {
                 <div>
                     <Header />    
                     <Switch>
-                        <Route path="/news/:id" component={News} />    
+                        <Route path="/news/:id" component={News} />
                         <Route exact path="/" component={Home} />
                         <Route path="/galleries/:id" component={GalleryItem} />
                     </Switch>

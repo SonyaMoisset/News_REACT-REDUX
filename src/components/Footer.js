@@ -1,11 +1,9 @@
 import React from 'react'
 
-const Footer = () => {
-    return (
-        <footer>
-            <div>DailyNews</div>
-        </footer>
-    )
-}
+const Footer = () => (
+    <footer>
+        <div>DailyNews</div>
+    </footer>
+)
 
 export default Footer

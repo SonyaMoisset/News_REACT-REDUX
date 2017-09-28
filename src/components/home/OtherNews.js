@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const showOther = ({otherNews}) => {
+const showOtherNews = ({ otherNews }) => {
     if (otherNews) {
-        return otherNews.map((news) => {
+        return otherNews.map(news => {
             return (
                 <Link
                     key={news.id}
@@ -33,15 +33,13 @@ const showOther = ({otherNews}) => {
     }
 }
 
-const OtherNews = (props) => {
-    return (
-        <div className="other-news">
-            <h2>Other News</h2>
-            <div className="other-news-items">
-                {showOther(props)}    
-            </div>
+const OtherNews = props => (
+    <div className="other-news">
+        <h2>Other News</h2>
+        <div className="other-news-items">
+            {showOtherNews(props)}    
         </div>
-    )
-}
+    </div>
+)
 
 export default OtherNews
