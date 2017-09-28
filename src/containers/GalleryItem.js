@@ -4,6 +4,8 @@ import { selectedGallery, clearSelectedGallery } from '../actions/gallery_action
 import { bindActionCreators } from 'redux'
 import Slider from 'react-slick'
 
+import Counter from './LikesCounter'
+
 const settings = {
     dots: true,
     infinite: true,
@@ -44,6 +46,12 @@ class GalleryItem extends Component {
                             )
                         })}
                     </Slider>
+                    <Counter
+                        articleId={gallery.id}
+                        type="HANDLE_LIKES_GALLERY"
+                        section="galleries"
+                        likes={gallery.likes[0]}
+                        dislikes={gallery.likes[1]}/>
                 </div>
             )
         }
