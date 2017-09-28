@@ -1,0 +1,31 @@
+.addlikes-wrapper {
+    margin-block-end: 20px;
+}
+
+.addlikes-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addlikes-container .btn {
+    cursor: pointer;
+    text-align: center;
+    background: #f8f8f8;
+    flex: 1;
+    color: #b6d2e8;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.addlikes-container .btn:hover {
+    background: #607d8b;
+}
+
+.addlikes-container .btn.like {
+    border-right: 1px solid #fff;
+}
+
+.addlikes-container .btn.dislike {
+    border-left: 1px solid #fff;
+}
