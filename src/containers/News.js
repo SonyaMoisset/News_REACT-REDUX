@@ -49,6 +49,8 @@ class News extends Component {
                         <div>
                             <Counter
                                 articleId={item.id}
+                                type="HANDLE_LIKES_ARTICLE"
+                                section="articles"
                                 likes={item.likes[0]}
                                 dislikes={item.likes[1]}/>
                         </div>

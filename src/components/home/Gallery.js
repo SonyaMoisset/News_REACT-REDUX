@@ -10,27 +10,26 @@ const settings = {
     slideToScroll: 1
 }
 
-const showGallery = ({latestGallery}) => {
+const showGallery = ({ latestGallery }) => {
     if (latestGallery) {
         return (
             <Slider {...settings}>
-                {latestGallery.map((item) => {
+                {latestGallery.map((gallery) => {
                     return (
                         <Link
-                            to={`/galleries/${item.id}`}
-                            key={item.id}
+                            to={`/galleries/${gallery.id}`}
+                            key={gallery.id}
                             className="slider-item">
                             <div
                                 className="image"
-                                style={{ background: `url(/images/galleries/${item.images[0].img})` }}>
-                                <h3>{item.artist}</h3>
+                                style={{ background: `url(/images/galleries/${gallery.images[0].img})` }}>
+                                <h3>{gallery.artist}</h3>
                             </div>
                         </Link>
                     )
                 })}    
             </Slider>
         )
-
     }
 }
 
