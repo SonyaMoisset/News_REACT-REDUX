@@ -8,7 +8,7 @@ export default function (state = {}, action) {
         case 'GET_OTHER':
             return {
                 ...state,
-                other: action.payload
+                otherNews: action.payload
             }
         case 'GET_SELECTED_NEWS':
             return {

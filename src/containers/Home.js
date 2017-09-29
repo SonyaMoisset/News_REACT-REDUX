@@ -18,7 +18,7 @@ class Home extends Component {
         return (
             <div>
                 <LatestNews latestNews={this.props.articles.latestNews} />
-                <OtherNews otherNews={this.props.articles.other} />
+                <OtherNews otherNews={this.props.articles.otherNews} />
                 <Gallery latestGallery={this.props.gallery.latestGallery} />
             </div>
         );

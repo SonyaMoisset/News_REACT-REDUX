@@ -17,42 +17,42 @@ class News extends Component {
 
     renderNews = ({ selected }) => {
         if (selected) {
-            return selected.map((item) => {
+            return selected.map(news => {
                 return (
-                    <div key={item.id}>
+                    <div key={news.id}>
                         <div className="tags">
                             <span>
                                 <i className="fa fa-eye"></i>
-                                {item.views}
+                                {news.views}
                             </span>
                             <span>
                                 <i className="fa fa-thumbs-up"></i>
-                                {item.likes[0]}
+                                {news.likes[0]}
                             </span>
                             <span>
                                 <i className="fa fa-thumbs-down"></i>
-                                {item.likes[1]}
+                                {news.likes[1]}
                             </span>  
                         </div>
 
                         <div className="top">
-                            <h2>{item.title}</h2> 
-                            <span>Article by: <strong>{item.author}</strong></span>
+                            <h2>{news.title}</h2> 
+                            <span>Article by: <strong>{news.author}</strong></span>
                         </div>
 
-                        <img alt={item.title} src={`/images/articles/${item.img}`} />
+                        <img alt={news.title} src={`/images/articles/${news.img}`} />
 
                         <div className="body-news">
-                            {item.body}    
+                            {news.body}    
                         </div>
 
                         <div>
                             <Counter
-                                articleId={item.id}
+                                articleId={news.id}
                                 type="HANDLE_LIKES_ARTICLE"
                                 section="articles"
-                                likes={item.likes[0]}
-                                dislikes={item.likes[1]}/>
+                                likes={news.likes[0]}
+                                dislikes={news.likes[1]}/>
                         </div>
                     </div>
                 )
@@ -70,7 +70,6 @@ class News extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state)
     return {
         articles: state.articles
     }

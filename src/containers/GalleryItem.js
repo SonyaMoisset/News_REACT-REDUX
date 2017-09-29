@@ -26,21 +26,22 @@ class GalleryItem extends Component {
     renderSlider = ({ selected }) => {
         if (selected) {
             const gallery = selected[0]
+
             return (
                 <div>
                     <h3>The best of {gallery.artist}</h3>
                     <Slider {...settings}>
-                        {gallery.images.map((item, index) => {
+                        {gallery.images.map((image, index) => {
                             return (
                                 <div
                                     key={index}
                                     className="slide-item">
                                     <div
                                         className="image"
-                                    style={{background: `url(/images/galleries/${item.img}`}}>
+                                        style={{ background: `url(/images/galleries/${image.img}`}}>
                                     </div>
                                     <div className="description">
-                                        <span>{item.desc}</span>
+                                        <span>{image.desc}</span>
                                     </div>
                                 </div>
                             )

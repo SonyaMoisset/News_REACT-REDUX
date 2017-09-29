@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import Home from '../containers/Home'
-import News from '../containers/News'
-import GalleryItem from '../containers/GalleryItem'
-
+import { Home, News, GalleryItem } from '../containers'
 import { Header, Footer } from '../components'
 
 class App extends Component {

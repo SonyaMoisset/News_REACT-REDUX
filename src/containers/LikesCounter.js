@@ -5,9 +5,8 @@ import { bindActionCreators } from 'redux'
 
 class LikesCounter extends Component {
 
-    addLikes = (action) => {
+    addLikes = action => {
         const props = this.props;
-
         const newLikes = action === 'ADD' ? [props.likes + 1, props.dislikes] : [props.likes, props.dislikes + 1]
         
         this.props.handleLikes(newLikes, props.articleId, props.section, props.type)
