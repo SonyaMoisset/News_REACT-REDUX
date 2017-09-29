@@ -1,20 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const showLatestNews = ({ latest }) => {
-    if (latest) {
-        return latest.map(article => {
+const showLatestNews = ({ latestNews }) => {
+    if (latestNews) {
+        return latestNews.map(news => {
             return (
                 <Link
-                    key={article.id}
-                    to={`/news/${article.id}`}
+                    key={news.id}
+                    to={`/news/${news.id}`}
                     className="article">
                     <div
                         className="image-cover"
-                        style={{ background: `url(/images/articles/${article.img})` }}>
+                        style={{ background: `url(/images/articles/${news.img})` }}>
                         <div className="description">
-                            <span>{article.category}</span>
-                            <div>{article.title}</div>
+                            <span>{news.category}</span>
+                            <div>{news.title}</div>
                         </div>
                     </div>
                 </Link>

@@ -3,7 +3,7 @@ export default function (state = {}, action) {
         case 'GET_LATEST':
             return {
                 ...state,
-                latest: action.payload
+                latestNews: action.payload
             }   
         case 'GET_OTHER':
             return {
