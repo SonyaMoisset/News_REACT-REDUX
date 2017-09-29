@@ -22,7 +22,7 @@ To see the project:
 - Likes/dilsikes React component
     
 
-### A user can seethe latest news and other news on the homepage
+### A user can see the latest news and other news on the homepage
 ![Homepage](https://github.com/SonyaMoisset/news-redux/blob/master/homepage.png) 
 
 ### A user can navigate to news articles
