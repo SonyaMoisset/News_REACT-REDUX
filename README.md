@@ -1,5 +1,7 @@
 # News Highlights
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/SonyaMoisset/News_REACT-REDUX.svg)](https://greenkeeper.io/)
+
 ## A React/Redux web application where news highlights are fetched from a json file
 
 To see the project:
